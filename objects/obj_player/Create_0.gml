@@ -2,6 +2,7 @@
 
 horizontal_speed = 0;
 vertical_speed = 0;
+on_ground = false;
 gravity_ = 0.15;
 walk_speed = 3.5;
 jump_speed_max = 5;

@@ -1,6 +1,6 @@
 /// @description Player Movement
 
-var key_left, key_right, key_jump, key_jump_held, on_ground;
+var key_left, key_right, key_jump, key_jump_held;
 
 key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
@@ -36,20 +36,3 @@ x += horizontal_speed;
 Collision_Check_y(obj_wall);
 
 y += vertical_speed;
-
-// Animation
-if (!on_ground) {
-	image_speed = 1;
-	sprite_index = spr_player_air;
-} else {
-	image_speed = 1;
-	if (horizontal_speed == 0) {
-		sprite_index = spr_player;
-	} else {
-		sprite_index = spr_player_run;
-	}
-}
-
-if (horizontal_speed != 0) {
-	image_xscale = sign(horizontal_speed);
-}

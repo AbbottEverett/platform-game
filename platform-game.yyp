@@ -305,6 +305,25 @@
             }
         },
         {
+            "Key": "4aa3ad36-23f4-4d2c-b2ba-36baf84c8a73",
+            "Value": {
+                "id": "63ece88d-87c2-476d-909e-ca8a0814b7c9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_camera\/obj_camera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "553760be-ec96-4276-ae31-6ea212ef0ffa",
             "Value": {
                 "id": "e66b8888-4563-43bf-bfb6-5cfc89c7a2ab",
