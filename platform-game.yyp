@@ -476,6 +476,25 @@
             }
         },
         {
+            "Key": "86c7958d-71f6-443e-b984-bd0b3c71e00e",
+            "Value": {
+                "id": "38886ef4-e0ea-424d-b2f3-456ea2bb8c35",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_run\/spr_player_run.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "89a8d8d3-858b-437f-99f7-7adcd3285b28",
             "Value": {
                 "id": "d8cf61c5-e890-400a-8c55-7b71289982db",
@@ -510,25 +529,6 @@
                     "default"
                 ],
                 "resourcePath": "views\/8b2bd623-826c-473d-82ca-36886d600e1b.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "97af14bc-5acd-43e9-b9c8-4133d512b25b",
-            "Value": {
-                "id": "2556d239-5d9d-49a6-9e48-7117751cdd38",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "views\/97af14bc-5acd-43e9-b9c8-4133d512b25b.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -780,9 +780,9 @@
             }
         },
         {
-            "Key": "e8f2a49f-0591-4882-84c4-84929d247cc1",
+            "Key": "e47cb194-9e91-432d-b01e-86e020a00c39",
             "Value": {
-                "id": "cec57f79-3349-4137-8976-250ac326ea5b",
+                "id": "4f3debbf-bf45-4b9a-ab28-17c6e3bf43d1",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -794,8 +794,8 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "views\/e8f2a49f-0591-4882-84c4-84929d247cc1.yy",
-                "resourceType": "GMFolder"
+                "resourcePath": "sprites\/spr_player_air\/spr_player_air.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
