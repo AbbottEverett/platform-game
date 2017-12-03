@@ -1,21 +1,30 @@
 /// @description Player Movement
 
-var key_left, key_right, key_jump, on_ground;
+var key_left, key_right, key_jump, key_jump_held, on_ground;
 
 key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
+key_jump_held = keyboard_check(vk_space) || keyboard_check(ord("W"));
 
 // Set Player State
 on_ground = place_meeting(x,y+1,obj_wall);
 
 // Calculate Movement //
 var move_direction = key_right - key_left;
-horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
+if (move_direction != 0) {
+	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
+} else {
+	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), friction_);
+}
 vertical_speed += gravity_;
 
 if (on_ground) && (key_jump) {
-	vertical_speed = -jump_speed;
+	vertical_speed = -jump_speed_max;
+}
+
+if (vertical_speed < 0) && (!key_jump_held) {
+	vertical_speed = max(vertical_speed, -jump_speed_min);
 }
 
 // Horizontal Collision
