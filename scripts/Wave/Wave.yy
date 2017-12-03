@@ -1,8 +1,8 @@
 {
-    "id": "6b00cd46-31c2-4b90-8e53-de583d73c146",
+    "id": "0986eb8e-2d3d-4c85-81d5-1b598461940c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "Collision_Check_x",
+    "name": "Wave",
     "IsCompatibility": false,
     "IsDnD": false
 }

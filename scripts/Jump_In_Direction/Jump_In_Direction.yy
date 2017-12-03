@@ -1,8 +1,8 @@
 {
-    "id": "6b00cd46-31c2-4b90-8e53-de583d73c146",
+    "id": "2191c166-242d-4f47-94fe-e53f71ea8201",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "Collision_Check_x",
+    "name": "Jump_In_Direction",
     "IsCompatibility": false,
     "IsDnD": false
 }

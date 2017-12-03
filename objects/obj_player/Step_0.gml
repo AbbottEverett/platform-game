@@ -11,20 +11,26 @@ on_ground = place_meeting(x,y+1,obj_wall);
 
 // Calculate Movement //
 // Sets left true/false to -1 or 0
-key_left = -key_left;
-horizontal_speed = (key_left + key_right) * walk_speed;
 vertical_speed += _gravity;
+
+if (key_left) {
+	horizontal_speed = -walk_speed;
+}
+
+if (key_right) {
+	horizontal_speed = walk_speed;
+}
 
 if (on_ground) && (key_jump) {
 	vertical_speed = -jump_speed;
 }
 
 // Horizontal Collision
-collision_check_x(obj_wall);
+Collision_Check_x(obj_wall);
 
 x += horizontal_speed;
 
 // Vertical Collision
-collision_check_y(obj_wall);
+Collision_Check_y(obj_wall);
 
 y += vertical_speed;

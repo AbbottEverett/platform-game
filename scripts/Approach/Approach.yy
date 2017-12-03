@@ -1,8 +1,8 @@
 {
-    "id": "6b00cd46-31c2-4b90-8e53-de583d73c146",
+    "id": "b17b5b62-ee44-4573-b226-8a2ce8119b05",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "Collision_Check_x",
+    "name": "Approach",
     "IsCompatibility": false,
     "IsDnD": false
 }

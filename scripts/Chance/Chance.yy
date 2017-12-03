@@ -1,8 +1,8 @@
 {
-    "id": "615adf8c-6f51-4804-acc9-5f6c1441adf6",
+    "id": "37f7ee00-4a4d-4b6f-b45f-f6f080231894",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "get_player_inputs",
+    "name": "Chance",
     "IsCompatibility": false,
     "IsDnD": false
 }
