@@ -1,4 +1,4 @@
-/// @description Manage Player State
+/// @description Player Movement
 
 var key_left, key_right, key_jump, on_ground;
 
@@ -10,16 +10,9 @@ key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
 on_ground = place_meeting(x,y+1,obj_wall);
 
 // Calculate Movement //
-// Sets left true/false to -1 or 0
-vertical_speed += _gravity;
-
-if (key_left) {
-	horizontal_speed = -walk_speed;
-}
-
-if (key_right) {
-	horizontal_speed = walk_speed;
-}
+var move_direction = key_right - key_left;
+horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
+vertical_speed += gravity_;
 
 if (on_ground) && (key_jump) {
 	vertical_speed = -jump_speed;
