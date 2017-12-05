@@ -12,6 +12,7 @@ on_ground = place_meeting(x,y+1,obj_wall);
 
 // Calculate Movement //
 var move_direction = key_right - key_left;
+// Ease in and Out for left-right Movement
 if (move_direction != 0) {
 	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
 } else {
@@ -19,7 +20,13 @@ if (move_direction != 0) {
 }
 vertical_speed += gravity_;
 
-if (on_ground) && (key_jump) {
+// Jump mechanic
+if (on_ground) {
+	jump_count = jump_max;
+}
+
+if (jump_count > 0) && (key_jump) {
+	jump_count--;
 	vertical_speed = -jump_speed_max;
 }
 
