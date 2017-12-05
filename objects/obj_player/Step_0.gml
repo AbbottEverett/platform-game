@@ -1,14 +1,39 @@
 /// @description Player Movement
 
 var key_left, key_left_held, key_right, key_right_held, key_jump, key_jump_held;
+var gp_count = gamepad_get_device_count();
+var gp_index;
+for (var i = 0; i < gp_count; i++) {
+	if gamepad_is_connected(i) {
+		gp_in_control = true;
+		gp_index = i;
+		break;
+	}
+}
+
+if (gp_in_control) {
+	// Gamepad Controls
+	var gp_axis_val = gamepad_axis_value(gp_index, gp_axislh);
+	key_left_held = gamepad_button_check(gp_index, gp_padl);
+	if (gp_axis_val < -deadzone) {
+		key_left_held = sign(-gp_axis_val);
+	}
+	key_right_held = gamepad_button_check(gp_index, gp_padr);
+	if (gp_axis_val > deadzone) {
+		key_right_held = sign(gp_axis_val);
+	}
+	key_jump = gamepad_button_check_pressed(gp_index, gp_shoulderlb);
+	key_jump_held = gamepad_button_check(gp_index, gp_shoulderlb);
+} else {
+	// Keyboard Controls
+	key_left_held = keyboard_check(vk_left) || keyboard_check(ord("A"));
+	key_right_held = keyboard_check(vk_right)|| keyboard_check(ord("D"));
+	key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
+	key_jump_held = keyboard_check(vk_space) || keyboard_check(ord("W"));
+}
 
 
-key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
-key_left_held = keyboard_check(vk_left) || keyboard_check(ord("A"));
-key_right = keyboard_check_pressed(vk_right)|| keyboard_check_pressed(ord("D"));
-key_right_held = keyboard_check(vk_right)|| keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
-key_jump_held = keyboard_check(vk_space) || keyboard_check(ord("W"));
+
 
 // Set Player State
 on_ground = place_meeting(x,y+1,obj_wall);

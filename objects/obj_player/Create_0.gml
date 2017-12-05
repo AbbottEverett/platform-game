@@ -1,7 +1,7 @@
 /// @description Initialize Player Variables
 
 horizontal_speed = 0;
-walk_speed = 2.5;
+walk_speed = 1.5;
 dash_speed = 4;
 acceleration_ = 0.25;
 friction_ = 0.3;
@@ -15,3 +15,7 @@ on_ground = false;
 has_walked = false;
 jump_count = 0;
 jump_max = 2;
+
+// Gamepad variables
+gp_in_control = false;
+deadzone = 0.2;
