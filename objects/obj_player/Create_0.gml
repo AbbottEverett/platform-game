@@ -2,7 +2,7 @@
 
 horizontal_speed = 0;
 walk_speed = 1.5;
-dash_speed = 4;
+dash_speed = 3;
 acceleration_ = 0.25;
 friction_ = 0.3;
 

@@ -13,7 +13,13 @@ if (x > xTo+buff) {
 if (x < xTo-buff) {
 	x = xTo-buff;
 }
-y = yTo;
+if (y > yTo+buff) {
+	y = yTo+buff;
+}
+if (y < yTo-buff) {
+	y = yTo-buff;
+}
+
 
 // Force camera to bounds of room
 x = clamp(x, view_width_half, room_width-view_width_half);
