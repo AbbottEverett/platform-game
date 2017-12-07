@@ -1,6 +1,6 @@
 /// @description Player Movement
 
-var key_left, key_left_held, key_right, key_right_held, key_jump, key_jump_held;
+var key_left_held, key_right_held, key_jump, key_jump_held;
 var gp_count = gamepad_get_device_count();
 var gp_index;
 for (var i = 0; i < gp_count; i++) {
@@ -40,11 +40,6 @@ on_ground = place_meeting(x,y+1,obj_wall);
 
 // Calculate Movement //
 var move_direction = key_right_held - key_left_held;
-/*if (move_direction != 0) {
-	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
-} else {
-	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), friction_);
-}*/
 vertical_speed += gravity_;
 
 // Dash Mechanic

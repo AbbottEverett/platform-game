@@ -7,19 +7,9 @@ if (instance_exists(obj_to_follow)) {
 }
 
 // Update camera object position
-if (x > xTo+buff) {
-	x = xTo+buff;
-}
-if (x < xTo-buff) {
-	x = xTo-buff;
-}
-if (y > yTo+buff) {
-	y = yTo+buff;
-}
-if (y < yTo-buff) {
-	y = yTo-buff;
-}
 
+x += round((xTo - x) / cam_speed);
+y += round((yTo - y) / cam_speed);
 
 // Force camera to bounds of room
 x = clamp(x, view_width_half, room_width-view_width_half);
@@ -29,9 +19,11 @@ y = clamp(y, view_height_half, room_height-view_height_half);
 camera_set_view_pos(camera, x-view_width_half, y-view_height_half);
 
 if (layer_exists("Mountains")) {
-	layer_x("Mountains", x/2);
+	layer_x("Mountains", round(x/2));
 }
 
 if (layer_exists("Trees")) {
-	layer_x("Trees", x/4);
+	layer_x("Trees", round(x/4));
 }
+
+display_reset(2, true);

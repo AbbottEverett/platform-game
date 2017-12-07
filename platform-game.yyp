@@ -495,6 +495,25 @@
             }
         },
         {
+            "Key": "75e6b2eb-3ccd-4d10-9553-e49b01084463",
+            "Value": {
+                "id": "c3a49fab-1ab1-41b7-8e37-d7fcb25c22ca",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_camera\/spr_camera.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7db17a85-c67e-4149-935d-f29b6616cae0",
             "Value": {
                 "id": "04a78d26-568d-4937-bb75-ffdcef59d2a3",
