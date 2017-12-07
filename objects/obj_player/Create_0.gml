@@ -2,9 +2,9 @@
 
 horizontal_speed = 0;
 walk_speed = 1.5;
-dash_speed = 3;
+dash_speed = 2.5;
 acceleration_ = 0.25;
-friction_ = 0.3;
+friction_ = 0.1;
 
 vertical_speed = 0;
 gravity_ = 0.15;

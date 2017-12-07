@@ -6,4 +6,5 @@ view_height_half = camera_get_view_height(camera) * 0.5;
 xTo = xstart;
 yTo = ystart;
 
-cam_speed = 35;
+cam_fidelity = 20;
+buff = 32;

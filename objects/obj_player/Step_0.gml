@@ -47,11 +47,12 @@ if (horizontal_speed == 0) {
 	has_walked = false;
 }
 
-if ((key_left_held) || (key_right_held)) && (has_walked == false) {
+if ((key_left_held) || (key_right_held)) && (!has_walked) {
 	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), acceleration_);
-} else if ((key_left_held) || (key_right_held)) && (has_walked == true) {
+} else if ((key_left_held) || (key_right_held)) && (has_walked) {
+	has_walked = true;
 	horizontal_speed = Approach(horizontal_speed, (dash_speed * move_direction), acceleration_);
-} else {
+} else if (horizontal_speed != 0) {
 	has_walked = true;
 	horizontal_speed = Approach(horizontal_speed, (walk_speed * move_direction), friction_);
 }
